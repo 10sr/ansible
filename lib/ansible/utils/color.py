@@ -95,6 +95,11 @@ def stringc(text, color):
         return text
 
 
+def stringunc(text):
+    """Remove color from string."""
+    return re.sub(r"\003\[[0-9;]m", "", text)
+
+
 def colorize(lead, num, color):
     """ Print 'lead' = 'num' in 'color' """
     s = u"%s=%-4s" % (lead, str(num))
